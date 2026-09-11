@@ -1,0 +1,12 @@
+# Python 虚拟环境与缓存
+.venv/
+__pycache__/
+*.pyc
+
+# 模型文件太大（GitHub 单文件限 100MB），用 download_model.py / download_depth_model.py 下载
+models/
+
+# 个人照片与生成结果，不上传
+input/
+output/
+demo/ 
