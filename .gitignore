@@ -9,5 +9,7 @@ models/
 # 个人照片与生成结果，不上传
 input/
 output/
-demo/ 
-HANDOFF.md 
+demo/
+
+# 本地交接文档（含本机信息），不上传
+轮廓图交接文档.md

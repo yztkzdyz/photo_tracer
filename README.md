@@ -82,6 +82,18 @@ python generate_depth.py --input input\test.jpg --device GPU
 加 `--subject-outline` 可用 U-2-Net 提取人物主体轮廓（白线）叠加到两种深度图上，
 文件名会带 `_subject` 后缀，例如 `test_depth_subject.png`；`--line-width 3` 控制轮廓线宽。
 
+## 视频处理（可选）
+
+把视频逐帧转成伪彩色深度视频（红近蓝远，保留原分辨率和帧率，无音轨）：
+
+```powershell
+python process_video.py --input 视频.mp4 --device GPU
+# -> output\视频_depth.mp4
+# --max-frames 24 只处理前 24 帧（快速预览）
+```
+
+核显上约 6~7 帧/秒（720p），按视频时长预估等待时间。也可以把视频拖到 `处理视频.bat` 上。
+
 注意：单目深度是相对深度（谁近谁远），不能当绝对距离测量用。
 
 ## 摄像头叠加
